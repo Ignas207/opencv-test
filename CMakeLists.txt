@@ -7,7 +7,10 @@ find_package(OpenCV REQUIRED)
 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-add_executable(${PROJ_NAME} ${PROJ_PATH}/src/testing/display.cpp)
+add_executable(${PROJ_NAME}
+    ${PROJ_PATH}/src/testing/display.cpp
+    ${PROJ_PATH}/src/testing/colour-edge-detection.cpp    
+)
 
 target_compile_options(${PROJ_NAME} PRIVATE
     -Wall 
@@ -17,7 +20,7 @@ target_compile_options(${PROJ_NAME} PRIVATE
     -Wno-unused-parameter
     -fshort-enums
     -finline-functions
-    -Og -g3 -ggdb
+    -g3 -ggdb
     # -O3
 )
 
