@@ -29,7 +29,7 @@ void Detect_colour_edges(cv::Mat &image)
     ShowImage(avgImg, "Averaged saturation");
 
     cv::Mat cannyHue;
-    cv::Canny(avgImg, cannyHue, 5, 10, 3, false);
+    cv::Canny(avgImg, cannyHue, 100, 50, 3, false);
     ShowImage(cannyHue, "Canny hue");
 
     cv::Mat calculated_contours = image.clone();

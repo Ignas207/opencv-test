@@ -21,7 +21,7 @@ target_compile_options(${PROJ_NAME} PRIVATE
     -fshort-enums
     -finline-functions
     -g3 -ggdb
-    # -O3
+    -O2
 )
 
 target_link_libraries(${PROJ_NAME} ${OpenCV_LIBS} )
